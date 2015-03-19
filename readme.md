@@ -14,10 +14,15 @@ npm test
 
 ```js
 var vinylFilterSince = require('vinyl-filter-since');
+var gulp = require('gulp');
+var through2 = require('through2');
+
+gulp.src('some/file/path/*.js')
+  .pipe(vinylFilterSince(new Date('2015-03-16 13:27:54')))
+  .pipe(through2.obj(function(file, enc, next) {
+    // will not come here if file is older than given date
+  }))
 ```
-
-
-## API / CLI
 
 
 ## Author
