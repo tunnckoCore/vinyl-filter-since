@@ -1,6 +1,6 @@
 {
   "name": "vinyl-filter-since",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vinyl adapter to filter files that have been modified since given Date or Number",
   "scripts": {
     "lint": "jshint index.js && jscs index.js --reporter inline",
@@ -36,10 +36,10 @@
     "url": "https://github.com/tunnckoCore/vinyl-filter-since/blob/master/license.md"
   },
   "dependencies": {
-    "through2": "^0.6.3"
+    "through2": "~0.6.3"
   },
   "devDependencies": {
-    "gulp": "^3.8.11",
+    "gulp": "~3.8.11",
     "istanbul-harmony": "~0.3.1",
     "mocha": "~2.2.1"
   }
