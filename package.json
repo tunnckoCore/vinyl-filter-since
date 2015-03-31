@@ -4,9 +4,8 @@
   "description": "Vinyl adapter to filter files that have been modified since given Date or Number",
   "scripts": {
     "lint": "jshint index.js && jscs index.js --reporter inline",
-    "test": "mocha",
-    "test-cov": "istanbul cover _mocha",
-    "test-travis": "istanbul cover _mocha --report lcovonly"
+    "test": "lab -cv test.js",
+    "test-travis": "lab -cv test.js && lab -r lcov -o ./coverage/lcov.info test.js"
   },
   "author": {
     "name": "Charlike Mike Reagent",
@@ -41,7 +40,6 @@
   },
   "devDependencies": {
     "gulp": "~3.8.11",
-    "istanbul-harmony": "~0.3.1",
-    "mocha": "~2.2.1"
+    "lab": "~5.5.1"
   }
 }
