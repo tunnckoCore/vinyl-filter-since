@@ -1,5 +1,13 @@
 
 
+## v2.0.0 / March 31, 2015
+- Release v2.0.0 / npm@v2.0.0
+- lint
+- update tests, 100% coverage
+- migrate to `lab`
+- remove `debug`
+- add `assert-kindof`
+
 ## v1.0.1 / March 31, 2015
 - Release v1.0.1 / npm@v1.0.1
 - add attribution, close #1

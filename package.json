@@ -1,7 +1,7 @@
 {
   "name": "vinyl-filter-since",
-  "version": "1.0.1",
-  "description": "Vinyl adapter to filter files that have been modified since given Date or Number",
+  "version": "2.0.0",
+  "description": "Vinyl adapter (gulp plugin) to filter files that have been modified since given Date or Number",
   "scripts": {
     "lint": "jshint index.js && jscs index.js --reporter inline",
     "test": "lab -cv test.js",
