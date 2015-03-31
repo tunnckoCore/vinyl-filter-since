@@ -36,6 +36,7 @@
     "url": "https://github.com/tunnckoCore/vinyl-filter-since/blob/master/license.md"
   },
   "dependencies": {
+    "assert-kindof": "~1.0.0",
     "through2": "~0.6.3"
   },
   "devDependencies": {
