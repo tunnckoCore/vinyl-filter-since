@@ -10,19 +10,16 @@
 var is = require('assert-kindof');
 var through2 = require('through2');
 
-module.exports = function vinylFilterSince(since, debug) {
+module.exports = function vinylFilterSince(since) {
   if (!is.kindof(since, 'date') && !is.kindof(since, 'number')) {
     throw new TypeError('vinyl-filter-since:15, expect `since` to be date or number.');
   }
 
-  return through2.obj(function(file, enc, cb) {
+  return through2.obj(function(file, enc, next) {
     if (since < file.stat.mtime) {
-      return cb(null, file);
+      next(null, file);
+      return;
     }
-    if (debug) {
-      file.debug = true;
-      return cb(null, file);
-    }
-    cb();
+    next();
   });
 };
