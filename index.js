@@ -1,29 +1,35 @@
-/**
+/*!
  * vinyl-filter-since <https://github.com/tunnckoCore/vinyl-filter-since>
  *
- * Copyright (c) 2015 Charlike Mike Reagent, contributors.
+ * Copyright (c) 2015 Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
  * Released under the MIT license.
  */
 
-'use strict';
+'use strict'
 
-var Transform = require('readable-stream/transform');
+var Transform = require('readable-stream/transform')
 
-var label = 'vinyl-filter-since';
-
-module.exports = function vinylFilterSince(since) {
-  if (!(since instanceof Date) && typeof since !== 'number') {
-    throw new TypeError(label + ':15, expect `since` to be date or number.');
+module.exports = function vinylFilterSince (since) {
+  if (!isValid(since)) {
+    throw new TypeError('vinyl-filter-since: expect `since` be date or number')
   }
 
   return new Transform({
     objectMode: true,
-    transform: function(file, enc, next) {
+    transform: function (file, enc, next) {
       if (since < file.stat.mtime) {
-        this.push(file);
-        return;
+        this.push(file)
+        return
       }
-      next();
+      next()
     }
-  });
-};
+  })
+}
+
+function isValid (val) {
+  if (typeof val === 'number' || val instanceof Number || val instanceof Date) {
+    return true
+  }
+
+  return false
+}

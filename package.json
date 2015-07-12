@@ -1,21 +1,22 @@
 {
   "name": "vinyl-filter-since",
   "version": "2.0.0",
-  "description": "Vinyl adapter (gulp plugin) to filter files that have been modified since given Date or Number",
-  "scripts": {
-    "lint": "jshint index.js && jscs index.js --reporter inline",
-    "test": "lab -cv test.js",
-    "test-travis": "lab -cv test.js && lab -r lcov -o ./coverage/lcov.info test.js"
-  },
-  "author": {
-    "name": "Charlike Mike Reagent",
-    "email": "mameto_100@mail.bg",
-    "url": "https://github.com/tunnckoCore"
-  },
+  "description": "Gulp/vinyl plugin, filter files that have been modified since given Date or Number.",
   "repository": "tunnckoCore/vinyl-filter-since",
-  "files": [
-    "index.js"
-  ],
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "dependencies": {
+    "readable-stream": "~2.0.1"
+  },
+  "devDependencies": {
+    "assertit": "^0.1.0",
+    "through2": "^2.0.0",
+    "vinyl-fs": "^1.0.0"
+  },
   "keywords": [
     "file",
     "filter",
@@ -29,14 +30,5 @@
     "stream",
     "util",
     "vinyl"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "readable-stream": "^2.0.1"
-  },
-  "devDependencies": {
-    "lab": "^5.12.1",
-    "through2": "^2.0.0",
-    "vinyl-fs": "^1.0.0"
-  }
+  ]
 }
