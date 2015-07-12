@@ -7,21 +7,23 @@
 
 'use strict';
 
-var is = require('assert-kindof');
-var through2 = require('through2');
+var Transform = require('readable-stream/transform');
 
 var label = 'vinyl-filter-since';
 
 module.exports = function vinylFilterSince(since) {
-  if (!is.kindof(since, 'date') && !is.kindof(since, 'number')) {
+  if (!(since instanceof Date) && typeof since !== 'number') {
     throw new TypeError(label + ':15, expect `since` to be date or number.');
   }
 
-  return through2.obj(function(file, enc, next) {
-    if (since < file.stat.mtime) {
-      next(null, file);
-      return;
+  return new Transform({
+    objectMode: true,
+    transform: function(file, enc, next) {
+      if (since < file.stat.mtime) {
+        this.push(file);
+        return;
+      }
+      next();
     }
-    next();
   });
 };

@@ -7,11 +7,11 @@
 
 'use strict';
 
+var assert = require('assert');
 var fs = require('fs');
 var path = require('path');
-var gulp = require('gulp');
-var assert = require('assert');
-var vinylFilterSince = require('./index');
+var vinylFs = require('vinyl-fs');
+var vinylFilterSince = require('./');
 var through2 = require('through2');
 
 var fixture = path.join(__dirname, './package.json');
@@ -23,13 +23,11 @@ var it = lab.it;
 
 // DRY
 function testit(lastUpdateDate, len, done) {
-  var stream = gulp.src('*.json');
+  var stream = vinylFs.src('*.json');
   var files = [];
 
   stream
-    .pipe(through2.obj(function(file, enc, next) {
-      next(null, file);
-    }))
+    .pipe(through2.obj())
     .pipe(vinylFilterSince(lastUpdateDate))
     .pipe(through2.obj(function(file, enc, next) {
       files.push(file);
