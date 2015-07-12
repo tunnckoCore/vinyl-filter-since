@@ -1,5 +1,12 @@
 
 
+## 2.0.1 / 2015-07-12
+- Release v2.0.1 / npm@v2.0.1
+- update repo style and standard code style
+- reduce package size, thanks @shinnn
+  + use `readable-stream/transform` directly
+  + use `vinyl-fs` and `through2@v2` in tests
+
 ## 2.0.0 / 2015-03-31
 - Release v2.0.0 / npm@v2.0.0
 - lint

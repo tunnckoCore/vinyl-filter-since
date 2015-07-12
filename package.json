@@ -1,6 +1,6 @@
 {
   "name": "vinyl-filter-since",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Gulp/vinyl plugin, filter files that have been modified since given Date or Number.",
   "repository": "tunnckoCore/vinyl-filter-since",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
