@@ -1,6 +1,6 @@
 # [vinyl-filter-since][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] 
 
-> Gulp/vinyl plugin, filter files that have been modified since given Date or Number.
+> [Gulp](https://github.com/gulpjs/gulp)/[vinyl-fs](https://github.com/wearefractal/vinyl-fs) plugin, filter files that have been modified since given Date or Number.
 
 [![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
 
