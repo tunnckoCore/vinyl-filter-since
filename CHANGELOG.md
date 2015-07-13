@@ -1,6 +1,6 @@
 
 
-## 2.0.2 / 2015-07-12
+## 2.0.2 / 2015-07-14
 - Release v2.0.2 / npm@v2.0.2
 - update description
 - add related projects / libs
