@@ -18,8 +18,7 @@ module.exports = function vinylFilterSince (since) {
     objectMode: true,
     transform: function (file, enc, next) {
       if (since < file.stat.mtime) {
-        this.push(file)
-        return
+        return next(null, file)
       }
       next()
     }
