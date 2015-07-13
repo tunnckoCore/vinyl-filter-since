@@ -1,5 +1,11 @@
 
 
+## 2.0.2 / 2015-07-12
+- Release v2.0.2 / npm@v2.0.2
+- update description
+- add related projects / libs
+- fixes #5, that was really strange
+
 ## 2.0.1 / 2015-07-12
 - Release v2.0.1 / npm@v2.0.1
 - update repo style and standard code style
